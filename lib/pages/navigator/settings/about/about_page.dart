@@ -8,7 +8,7 @@ import 'package:todo_list/i10n/localization_intl.dart';
 import 'package:package_info/package_info.dart';
 import 'package:todo_list/json/update_info_bean.dart';
 import 'package:todo_list/model/global_model.dart';
-import 'package:todo_list/pages/webview_page.dart';
+import 'package:todo_list/pages/navigator/settings/about/webview_page.dart';
 import 'package:todo_list/widgets/loading_widget.dart';
 import 'package:todo_list/widgets/net_loading_widget.dart';
 import 'package:todo_list/widgets/update_dialog.dart';
@@ -26,6 +26,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     final globalModel = Provider.of<GlobalModel>(context);
     if(descriptions.isEmpty){
+      descriptions.add(DemoLocalizations.of(context).version107);
       descriptions.add(DemoLocalizations.of(context).version106);
       descriptions.add(DemoLocalizations.of(context).version105);
       descriptions.add(DemoLocalizations.of(context).version104);
